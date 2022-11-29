@@ -5,7 +5,7 @@ using Core.Entities;
 
 namespace Entities.Concretes
 {
-    public class Console:IEntity
+    public class Consoles:IEntity
     {
         public int ConsoleId { get; set; }
         public int ProductId { get; set; }

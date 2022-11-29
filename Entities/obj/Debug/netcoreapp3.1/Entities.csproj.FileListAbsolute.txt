@@ -1,0 +1,13 @@
+D:\ASP.NET\TechBackend\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+D:\ASP.NET\TechBackend\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+D:\ASP.NET\TechBackend\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\ASP.NET\TechBackend\Entities\bin\Debug\netcoreapp3.1\Core.dll
+D:\ASP.NET\TechBackend\Entities\bin\Debug\netcoreapp3.1\Core.pdb
+D:\ASP.NET\TechBackend\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.AssemblyReference.cache
+D:\ASP.NET\TechBackend\Entities\obj\Debug\netcoreapp3.1\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET\TechBackend\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+D:\ASP.NET\TechBackend\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+D:\ASP.NET\TechBackend\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
+D:\ASP.NET\TechBackend\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CopyComplete
+D:\ASP.NET\TechBackend\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+D:\ASP.NET\TechBackend\Entities\obj\Debug\netcoreapp3.1\Entities.pdb

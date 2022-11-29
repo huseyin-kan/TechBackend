@@ -1,0 +1,17 @@
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\Business.deps.json
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\Business.dll
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\Business.pdb
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\Core.dll
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\DataAccess.dll
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\Entities.dll
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\DataAccess.pdb
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\ASP.NET\TechBackend\Business\bin\Debug\netcoreapp3.1\Core.pdb
+D:\ASP.NET\TechBackend\Business\obj\Debug\netcoreapp3.1\Business.csproj.AssemblyReference.cache
+D:\ASP.NET\TechBackend\Business\obj\Debug\netcoreapp3.1\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET\TechBackend\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+D:\ASP.NET\TechBackend\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+D:\ASP.NET\TechBackend\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+D:\ASP.NET\TechBackend\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+D:\ASP.NET\TechBackend\Business\obj\Debug\netcoreapp3.1\Business.dll
+D:\ASP.NET\TechBackend\Business\obj\Debug\netcoreapp3.1\Business.pdb

@@ -5,7 +5,7 @@ using Core.Entities;
 
 namespace Entities.Concretes
 {
-    public class KeyboradAndMouse:IEntity
+    public class KeyboardAndMouse:IEntity
     {
         public int KmId { get; set; }
         public int ProductId { get; set; }
