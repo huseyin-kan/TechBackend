@@ -7,7 +7,7 @@ namespace Entities.Concretes
 {
     public class Consoles:IEntity
     {
-        public int ConsoleId { get; set; }
+        public int ConsolesId { get; set; }
         public int ProductId { get; set; }
         public string Color { get; set; }
         public int GamepadNumber { get; set; }

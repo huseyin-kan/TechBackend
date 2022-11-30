@@ -1,5 +1,7 @@
-﻿using DataAccess.Absctract;
+﻿using Core.EntityFramework;
+using DataAccess.Absctract;
 using Entities.Concretes;
+using Entities.Dtos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,51 +11,25 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfProductDal : IProductDal
+    public class EfProductDal : EfEntityRepositoryBase<Product, EcommContext>, IProductDal
     {
-        public void Add(Product product)
+        public List<ComputerDetailDto> GetComputerDetail()
         {
             using (EcommContext context = new EcommContext())
             {
-                var addedEntity = context.Entry(product);
-                addedEntity.State = EntityState.Added;
-                context.SaveChanges();
-            }
-        }
-
-        public void Delete(Product product)
-        {
-            using (EcommContext context = new EcommContext())
-            {
-                var deletedEntity = context.Entry(product);
-                deletedEntity.State = EntityState.Deleted;
-                context.SaveChanges();
-            }
-        }
-        
-        public void Update(Product product)
-        {
-            using (EcommContext context = new EcommContext())
-            {
-                var updatedEntity = context.Entry(product);
-                updatedEntity.State = EntityState.Modified;
-                context.SaveChanges();
-            }
-        }
-
-        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
-        {
-            using (EcommContext context = new EcommContext())
-            {
-                return filter == null ? context.Set<Product>().ToList() : context.Set<Product>().Where(filter).ToList();
-            }
-        }
-
-        public Product Get(Expression<Func<Product, bool>> filter)
-        {
-            using (EcommContext context = new EcommContext())
-            {
-                return context.Set<Product>().SingleOrDefault();
+                var result = from p in context.Products
+                             join c in context.Computers
+                             on p.ProductId equals c.ProductId
+                             select new ComputerDetailDto {ProductId=p.ProductId,
+                                 ProductName=p.ProductName,
+                                 Capacity=c.Capacity,
+                                 ComputerId=c.ComputerId,
+                                 ProductPrice=p.ProductPrice,
+                                 Ram=c.Ram,
+                                 Color=c.Color,
+                                 Cpu=c.Cpu,
+                                 Gpu=c.Gpu };
+                return result.ToList();
             }
         }
     }

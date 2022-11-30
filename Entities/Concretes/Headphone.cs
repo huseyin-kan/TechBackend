@@ -7,7 +7,7 @@ namespace Entities.Concretes
 {
     public class Headphone:IEntity
     {
-        public int HeadphonesId { get; set; }
+        public int HeadphoneId { get; set; }
         public int ProductId { get; set; }
         public bool IsWireless { get; set; }
         public string Type { get; set; }

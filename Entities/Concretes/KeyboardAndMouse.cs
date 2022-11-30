@@ -7,7 +7,7 @@ namespace Entities.Concretes
 {
     public class KeyboardAndMouse:IEntity
     {
-        public int KmId { get; set; }
+        public int KeyboardAndMouseId { get; set; }
         public int ProductId { get; set; }
         public string Color { get; set; }
     }
