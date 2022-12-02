@@ -9,8 +9,8 @@ namespace Entities.Concretes
     {
         public int CardId { get; set; }
         public int CustomerId { get; set; }
-        public int CardNumber { get; set; }
+        public string CardNumber { get; set; }
         public DateTime CardValidDate { get; set; }
-        public string CardSecurityName { get; set; }
+        public string CardScrty { get; set; }
     }
 }

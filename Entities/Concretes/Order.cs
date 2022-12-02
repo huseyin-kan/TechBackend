@@ -9,9 +9,9 @@ namespace Entities.Concretes
     {
         public int OrderId { get; set; }
         public int CustomerId { get; set; }
-        public DateTime OrderTime { get; set; }
-        public bool IsDelivered { get; set; }
-        public int OrderNumber { get; set; }
+        public DateTime OrderDate { get; set; }
+        public DateTime RequiredDate { get; set; }
+        public bool İsDelivered { get; set; }
         public decimal  OrderTotal { get; set; }
     }
 }

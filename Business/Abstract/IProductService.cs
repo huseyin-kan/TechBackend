@@ -8,10 +8,11 @@ namespace Business.Abstract
 {
     public interface IProductService
     {
-        List<Product> GetAll();
-        List<Product> GetAllByCategoryId(int id);
-        List<Product> GetByUnitPrice(decimal min, decimal max);
-        Product GetById(int id);
-        public List<ComputerDetailDto> GetComputerDetail();
+        public List<Product> GetAll();
+        public List<Product> GetAllByCategoryId(int id);
+        public List<Product> GetByUnitPrice(decimal min, decimal max);
+        public Product GetById(int id);
+
+        
     }
 }

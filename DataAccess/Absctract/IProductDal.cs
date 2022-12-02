@@ -9,6 +9,6 @@ namespace DataAccess.Absctract
 {
     public interface IProductDal:IEntityRepository<Product> 
     {
-        List<ComputerDetailDto> GetComputerDetail();
+
     }
 }

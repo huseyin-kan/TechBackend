@@ -35,9 +35,6 @@ namespace Business.Concrete
             return _productDal.GetAll(p => p.ProductPrice >= min && p.ProductPrice <= max);
         }
 
-        public List<ComputerDetailDto> GetComputerDetail()
-        {
-            return _productDal.GetComputerDetail();
-        }
+
     }
 }
