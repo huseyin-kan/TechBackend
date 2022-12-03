@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Absctract;
 using Entities.Concretes;
 using Entities.Dtos;
@@ -15,26 +16,37 @@ namespace Business.Concrete
         {
             _productDal = productDal;
         }
-        public List<Product> GetAll()
+
+        public IResult Add(Product product)
         {
-            return _productDal.GetAll();
+            _productDal.Add(product);
+            return new SuccessResult("Ürün eklendi");
         }
 
-        public List<Product> GetAllByCategoryId(int id)
+        public IDataResult<List<Product>> GetAll()
         {
-            return _productDal.GetAll(p => p.CategoryId == id);
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll());
         }
 
-        public Product GetById(int id)
+        public IDataResult<List<Product>> GetAllByCategoryId(int id)
         {
-            return _productDal.Get(p=>p.ProductId==id);
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.CategoryId == id));
         }
 
-        public List<Product> GetByUnitPrice(decimal min, decimal max)
+        public IDataResult<Product> GetById(int id)
         {
-            return _productDal.GetAll(p => p.ProductPrice >= min && p.ProductPrice <= max);
+            return new SuccessDataResult<Product>(_productDal.Get(p=>p.ProductId==id));
         }
 
+        public IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max)
+        {
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.ProductPrice >= min && p.ProductPrice <= max));
+        }
+
+        public IDataResult<List<OrderDetailDto>> GetOrderDetailDtos()
+        {
+            return new SuccessDataResult<List<OrderDetailDto>>(_productDal.GetOrderDetailDtos());
+        }
 
     }
 }

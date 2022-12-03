@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Absctract;
 using Entities.Concretes;
 using System;
@@ -14,9 +15,9 @@ namespace Business.Concrete
         {
             _cardDal = cardDal;
         }
-        public List<Card> GetCardsById(int id)
+        public IDataResult<List<Card>> GetCardsById(int id)
         {
-            return _cardDal.GetAll(c=>c.CardId==id);
+            return new SuccessDataResult<List<Card>>(_cardDal.GetAll(c=>c.CardId==id));
         }
     }
 }

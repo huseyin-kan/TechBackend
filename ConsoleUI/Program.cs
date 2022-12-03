@@ -16,9 +16,9 @@ namespace ConsoleUI
             OrderManager orderManager = new OrderManager(new EfOrderDal());
 
 
-            foreach (var order in orderManager.GetAll())
+            foreach (var order in productManager.GetOrderDetailDtos().Data)
             {
-                Console.WriteLine(order.CustomerId +"/"+order.OrderDate+"/"+order.RequiredDate +"/"+order.OrderTotal);
+                Console.WriteLine(order.OrderId +"/"+order.OrderDetailsId+"/"+order.ProductId +"/"+order.ProductName+"/" + order.Quantity+ "/" + order.ProductBrand+ "/" + order.ProductDescription+ "/" + order.ProductPrice);
             }
             //foreach (var category in categoryManager.GetAll())
             //{

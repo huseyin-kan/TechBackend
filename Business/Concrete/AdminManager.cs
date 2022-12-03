@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Absctract;
 using Entities.Concretes;
 using System;
@@ -14,9 +15,9 @@ namespace Business.Concrete
         {
             _adminDal = adminDal;
         }
-        public List<Admin> GetAdmins()
+        public IDataResult<List<Admin>> GetAdmins()
         {
-            return _adminDal.GetAll();
+            return new SuccessDataResult<List<Admin>>(_adminDal.GetAll());
         }
     }
 }
