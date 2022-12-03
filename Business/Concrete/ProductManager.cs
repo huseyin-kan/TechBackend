@@ -23,6 +23,12 @@ namespace Business.Concrete
             return new SuccessResult("Ürün eklendi");
         }
 
+        public IResult Delete(Product product)
+        {
+            _productDal.Delete(product);
+            return new SuccessResult("Ürün silindi");
+        }
+
         public IDataResult<List<Product>> GetAll()
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetAll());
@@ -48,5 +54,10 @@ namespace Business.Concrete
             return new SuccessDataResult<List<OrderDetailDto>>(_productDal.GetOrderDetailDtos());
         }
 
+        public IResult Update(Product product)
+        {
+            _productDal.Update(product);
+            return new SuccessResult("Ürün güncellendi");
+        }
     }
 }

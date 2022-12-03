@@ -15,6 +15,21 @@ namespace Business.Concrete
         {
             _orderDal = orderDal;
         }
+
+        public IResult Add(Order order)
+        {
+            _orderDal.Add(order);
+            return new SuccessResult("Siparişiniz alındı");
+            throw new NotImplementedException();
+        }
+
+        public IResult Delete(Order order)
+        {
+            _orderDal.Delete(order);
+            return new SuccessResult("Siparişiniz silindi");
+
+        }
+
         public IDataResult<List<Order>> GetAll()
         {
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll());
@@ -23,6 +38,11 @@ namespace Business.Concrete
         public IDataResult<List<Order>> GetAllByCustomerId(int customerId)
         {
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll(o=>o.CustomerId==customerId));
+        }
+
+        public IResult Update(Order order)
+        {
+            throw new NotImplementedException();
         }
     }
 }
