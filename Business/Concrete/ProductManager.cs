@@ -1,12 +1,14 @@
 ﻿using Business.Abstract;
 using Business.ValidationRules.FluentValidation;
 using Core.CrossCuttingConcerns.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Absctract;
 using Entities.Concretes;
 using Entities.Dtos;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business.Concrete
@@ -22,8 +24,16 @@ namespace Business.Concrete
         public IResult Add(Product product)
         {
             ValidationTool.Validate(new ProductValidator(), product);
+            IResult results = BusinessRules.Run(ProductNameAlreadyExist(product.ProductName));
+
+            if (results != null)
+            {
+                return results;
+            }
+
             _productDal.Add(product);
             return new SuccessResult("Ürün eklendi");
+
         }
 
         public IResult Delete(Product product)
@@ -44,7 +54,7 @@ namespace Business.Concrete
 
         public IDataResult<Product> GetById(int id)
         {
-            return new SuccessDataResult<Product>(_productDal.Get(p=>p.ProductId==id));
+            return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == id));
         }
 
         public IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max)
@@ -61,6 +71,16 @@ namespace Business.Concrete
         {
             _productDal.Update(product);
             return new SuccessResult("Ürün güncellendi");
+        }
+
+        private IResult ProductNameAlreadyExist(string productName)
+        {
+            var result = _productDal.GetAll(p => p.ProductName == productName).Any();
+            if (result)
+            {
+                return new ErrorResult("Bu ürün isminde başka bir ürün var");
+            }
+            return new SuccessResult("Ürün eklendi");
         }
     }
 }
