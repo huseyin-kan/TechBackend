@@ -71,3 +71,4 @@ D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.dll
 D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
 D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "euqjwPUUxylpCwZGZKuSt/DBLdWneSCC1PeloGQ7zJnCR4emWgjKGV1K1dUEHsbKFTzFvc0XKMyT+HY2taS2kA==",
+  "dgSpecHash": "8TODDLY/binFcMNU11VZfrjqXgjrkyypq0wgMB0sNw6rgWORmoRwE41edyYHkpa1NRIjI9PvSDakolMEkW4vgg==",
   "success": true,
   "projectFilePath": "D:\\ASP.NET\\TechBackend\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HUAWEI\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
     "C:\\Users\\HUAWEI\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\HUAWEI\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\HUAWEI\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
