@@ -72,3 +72,7 @@ D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.Depende
 D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
 D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\System.Web.Cors.dll
+D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\ASP.NET\TechBackend\WebAPI\bin\Debug\netcoreapp3.1\System.Web.Http.Cors.dll
