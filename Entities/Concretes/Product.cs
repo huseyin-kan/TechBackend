@@ -14,6 +14,7 @@ namespace Entities.Concretes
         public string ProductDescription { get; set; }
         public string ProductBrand { get; set; }
         public int UnitsInStock { get; set; }
+        public string ProductColor { get; set; }
 
     }
 }

@@ -30,7 +30,8 @@ namespace DataAccess.Concrete.EntityFramework
                                  ProductPrice = p.ProductPrice,
                                  ProductDescription = p.ProductDescription,
                                  UnitsInStock = p.UnitsInStock,
-                                 ProductBrand = p.ProductBrand
+                                 ProductBrand = p.ProductBrand,
+                                 ProductColor=p.ProductColor
                              };
                 return result.ToList();
             }
