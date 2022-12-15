@@ -67,6 +67,12 @@ namespace Business.Concrete
             return new SuccessDataResult<List<OrderDetailDto>>(_productDal.GetOrderDetailDtos());
         }
 
+        public IDataResult<List<Product>> GetProductsByTerm(string term)
+        {
+            var result = _productDal.GetAll(p=>p.ProductName.Contains(term) || p.ProductBrand.Contains(term));
+            return new SuccessDataResult<List<Product>>(result);
+        }
+
         public IDataResult<List<Product>> GetProductsByUnitPrice()
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetAll());

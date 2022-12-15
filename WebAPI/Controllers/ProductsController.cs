@@ -84,6 +84,25 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpGet("getproductsbyterm")]
+        public IActionResult GetProductByTerm(string term)
+        {
+            if (term==null)
+            {
+                var result1 = _productService.GetAll();
+                if (result1.Success)
+                {
+                    return Ok(result1);
+                }
+                return BadRequest(result1);
+            }
+            var result = _productService.GetProductsByTerm(term);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
 
         [HttpGet("getproductsbyprice")]
         public IActionResult GetProductsByPrice(string order)
