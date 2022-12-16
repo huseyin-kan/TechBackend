@@ -16,7 +16,6 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(u => u.UserPhone).Length(10, 10).WithMessage("Numara geçersiz");
             RuleFor(u => u.UserAddress).NotEmpty().WithMessage("Adres bölümü eksik olamaz");
             RuleFor(u => u.UserEmail).EmailAddress().WithMessage("Email adresi geçersiz");
-            RuleFor(u => u.UserDateOfBirth).NotEmpty().WithMessage("Doğum tarihi boş olamaz");
         }
     }
 }

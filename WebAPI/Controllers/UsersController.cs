@@ -50,5 +50,15 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpPost("login")]
+        public IActionResult Login(User user)
+        {
+            var result = _userService.Login(user.UserEmail, user.UserPassword);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace Entities.Concretes
         public string UserSurName { get; set; }
         public string UserPhone { get; set; }
         public string UserEmail { get; set; }
-        public DateTime UserDateOfBirth { get; set; }
+        public bool İsAdmin { get; set; }
         public string UserPassword { get; set; }
         public string UserAddress { get; set; }
     }

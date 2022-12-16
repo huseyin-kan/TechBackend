@@ -43,5 +43,14 @@ namespace Business.Concrete
             _userDal.Update(user);
             return new SuccessResult("Kayıt Güncellendi");
         }
+        public IDataResult<User> Login(string email, string password)
+        {
+            var user = _userDal.Get(u => u.UserEmail == email && u.UserPassword == password);
+            if (user!=null)
+            {
+                return new SuccessDataResult<User>(user,"Giriş yapıldı");
+            }
+            return new ErrorDataResult<User>("Kullanıcı adı veya şifre yanlış");
+        }
     }
 }
