@@ -8,5 +8,6 @@ namespace DataAccess.Absctract
 {
     public interface IUserDal:IEntityRepository<User>
     {
+        void updateUser(User user);
     }
 }
