@@ -18,7 +18,7 @@ namespace WebAPI.Controllers
         {
             _orderDetailService = orderDetailService;
         }
-        [HttpGet("getallbycorderid")]
+        [HttpGet("getallbyorderid")]
         public IActionResult GetAllByOrderId(int id)
         {
             var result = _orderDetailService.GetByOrderId(id);
