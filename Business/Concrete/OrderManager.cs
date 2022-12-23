@@ -20,7 +20,6 @@ namespace Business.Concrete
         {
             _orderDal.Add(order);
             return new SuccessResult("Siparişiniz alındı");
-            throw new NotImplementedException();
         }
 
         public IResult Delete(Order order)
@@ -39,6 +38,7 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll(o=>o.CustomerId==customerId));
         }
+
 
         public IResult Update(Order order)
         {

@@ -39,6 +39,17 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+        [HttpGet("getlastorder")]
+        public IActionResult GetLastOrder()
+        {
+            var result = _orderService.GetAll();
+            var lastOrder = result.Data.OrderByDescending(o => o.OrderId).FirstOrDefault();
+            if (result.Success)
+            {
+                return Ok(lastOrder);
+            }
+            return BadRequest(lastOrder);
+        }
 
         [HttpPost("add")]
         public IActionResult Add(Order order)

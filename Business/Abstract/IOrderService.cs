@@ -13,5 +13,6 @@ namespace Business.Abstract
         IResult Add(Order order);
         IResult Update(Order order);
         IResult Delete(Order order);
+    
     }
 }

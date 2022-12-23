@@ -33,6 +33,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  ProductBrand = p.ProductBrand,
                                  ProductColor=p.ProductColor
                              };
+
                 return result.ToList();
             }
         }

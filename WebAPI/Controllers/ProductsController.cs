@@ -134,6 +134,17 @@ namespace WebAPI.Controllers
             //var orderd =result.Data.OrderBy(p => p.ProductPrice);
 
         }
+        [HttpGet("getdetailsbyid")]
+        public IActionResult GetDetailsById(int id)
+        {
+            var result = _productService.GetOrderDetailDtos();
+            var resultById = result.Data.Where(o => o.OrderId == id);
+            if (result.Success)
+            {
+                return Ok(resultById);
+            }
+            return BadRequest(resultById);
+        }
         [HttpPost("update")]
         public IActionResult Update(Product product)
         {
